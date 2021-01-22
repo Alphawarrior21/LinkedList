@@ -16,21 +16,32 @@ namespace LinkedList
             Node First_Node = new Node(d1);
             Node Second_Node = new Node(d2);
             Node Third_Node = new Node(d3);
+            Node Fourth_Node = new Node(d4);
+            Node Fifth_Node = new Node(d5);
 
-            LinkedList singleLinkedList = new SingleLinkedList();
+            /*************Single Linked List***************/
+
+            SingleLinkedList singleLinkedList = new SingleLinkedList();
             singleLinkedList.Head = First_Node; /*Setting the first node*/
             singleLinkedList.Head.Next = Second_Node;
             Second_Node.Next = Third_Node;
             Third_Node.Next = null;
 
             singleLinkedList.Display();
-
-            Node Fourth_Node = new Node(d4);
             singleLinkedList.InsertNewNodeAtFrontOfLinkedList(Fourth_Node);
             singleLinkedList.Display();
-            Node Fifth_Node = new Node(d5);
             singleLinkedList.InsertNewNodeAtEndOfLinkedList(Fifth_Node);
             singleLinkedList.Display();
+
+            /*************Circular Linked List***************/
+            CircularLinkedList circularLinkedList = new CircularLinkedList();
+            circularLinkedList.InsertNewNodeAtFrontOfLinkedList(First_Node);
+            circularLinkedList.InsertNewNodeAtFrontOfLinkedList(Second_Node);
+            circularLinkedList.InsertNewNodeAtFrontOfLinkedList(Third_Node);
+            circularLinkedList.InsertNewNodeAtFrontOfLinkedList(Fourth_Node);
+            circularLinkedList.InsertNewNodeAtFrontOfLinkedList(Fifth_Node);
+            circularLinkedList.Display();
+
         }
     }
 }

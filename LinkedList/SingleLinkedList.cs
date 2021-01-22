@@ -6,14 +6,15 @@ namespace LinkedList
 {
     public abstract class LinkedList
     {
-        public Node Head { get; set; }
+       
         public abstract void Display();
         public abstract void InsertNewNodeAtFrontOfLinkedList(Node newNode);
         public abstract void InsertNewNodeAtEndOfLinkedList(Node newNode);
     }
    public class SingleLinkedList : LinkedList
     {
-       public override void Display()
+        public Node Head { get; set; }
+        public override void Display()
         {
             Node n = Head;
             StringBuilder stringBuilder = new StringBuilder();
